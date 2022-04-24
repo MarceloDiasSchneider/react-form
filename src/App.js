@@ -20,9 +20,14 @@ function App() {
     }));
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(form);
+  }
+
   return (
     <div className="App">
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="firstName"
@@ -108,6 +113,7 @@ function App() {
             <option value="violet">Violet</option>
           </select>
         </fieldset>
+        <button>Submit</button>
       </form>
     </div>
   );
